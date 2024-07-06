@@ -1,0 +1,17 @@
+{
+    "custom/updates": {
+        "return-type":"json",
+
+        "format":"{icon} {}",
+        "format-icons":{
+            "none":"",
+            "updates":"",
+            "warning":"!"
+        },
+
+        "exec": "~/.config/waybar/modules/scripts/update-sys.sh --get",
+        "on-click": "~/.config/waybar/modules/scripts/update-sys.sh --click",
+        "restart-interval": 300,
+        "tooltip": true
+    }
+}

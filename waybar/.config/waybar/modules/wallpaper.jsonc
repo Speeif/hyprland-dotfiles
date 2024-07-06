@@ -1,0 +1,8 @@
+{
+    "custom/wallpaper":{
+        "format":"",
+        "on-click":"~/.config/waybar/modules/scripts/wallpaper.sh --increase",
+        "on-click-right":"~/.config/waybar/modules/scripts/wallpaper.sh --decrease",
+        "interval":"once"
+    }
+}

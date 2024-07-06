@@ -1,0 +1,13 @@
+{
+    "custom/volume":{
+        "return-type":"json",
+        "format":"{}",
+        // "exec":"echo '{\"text\":\"aaa\"}'",
+        "exec":"~/.config/waybar/modules/scripts/volume.sh --get",
+        // "interval": "1",
+        "tooltip":true,
+        "on-scroll-up": "~/.config/waybar/modules/scripts/volume.sh --toggle-off",
+        "on-scroll-down": "~/.config/waybar/modules/scripts/volume.sh --toggle-on",
+        "on-click-right":"~/.config/waybar/modules/scripts/volume.sh --toggle-alt"
+    }
+}

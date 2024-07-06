@@ -1,0 +1,13 @@
+#bluetooth.connected{
+    color: lightblue;
+}
+
+#bluetooth.on{
+    color: white;
+    /* text-shadow: -1px -1px 0 white,1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; */
+}
+
+#bluetooth.off,
+#bluetotoh.disabled{
+    color: gray;
+}

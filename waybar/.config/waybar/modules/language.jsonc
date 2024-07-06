@@ -1,0 +1,9 @@
+{
+    "hyprland/language": {
+        "interval": 30,
+        "format": " {}",
+        "keyboard-name": "logitech-pro-gaming-keyboard",
+        "on-click": "~/.config/HyprV/hyprv_util swkb",
+        "signal": 8
+    }
+}

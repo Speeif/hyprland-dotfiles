@@ -1,0 +1,20 @@
+{
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "tooltip-format":"Screen brightness at {percent}%",
+        "on-scroll-up": "~/.config/equil/scripts/brightness-adjuster -i",
+        "on-scroll-down": "~/.config/equil/scripts/brightness-adjuster -d"
+    },
+    "custom/backlight":{
+        "return-type":"json",
+        // "exec":"echo '{\"text\":\"aaa\"}'",
+        "exec":"bash -c \"exec -a waybar-script ~/.config/waybar/modules/scripts/brightness.sh --get &\"",
+        // "interval": "1",
+        "tooltip":true,
+        "on-scroll-up": "~/.config/waybar/modules/scripts/brightness.sh --inc",
+        "on-scroll-down": "~/.config/waybar/modules/scripts/brightness.sh --dec",
+        "on-click-right":"~/.config/waybar/modules/scripts/brightness.sh --toggle-alt"
+    }
+}

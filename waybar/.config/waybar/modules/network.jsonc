@@ -1,0 +1,15 @@
+{
+    "network": {
+        "format":"yo",
+        "interface": "wlo1", // (Optional) To force the use of this interface
+        "format-wifi": "󰖩",
+        // "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr}  at  {signalStrength}%",
+        // "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "󱚵",
+        "format-disabled":"󰖪",
+        // "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click":"kitty --title nmtui sh -c 'sleep .1 && nmtui'",
+        "interval":1
+    }
+}

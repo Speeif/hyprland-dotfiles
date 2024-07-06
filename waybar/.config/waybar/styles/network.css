@@ -1,0 +1,11 @@
+#network{
+    color:lightblue;
+}
+
+#network.disconnected{
+    color: pink;
+}
+
+#network.disabled{
+    color:gray;
+}

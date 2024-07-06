@@ -1,0 +1,10 @@
+{
+    "bluetooth":{
+        "format":"",
+        "controller":"CC:5E:F8:02:3D:42",
+        "on-click":"~/.dotfiles/waybar/modules/scripts/bluetooth.sh --manage",
+        "on-click-right":"~/.dotfiles/waybar/modules/scripts/bluetooth.sh --toggle",
+        "tooltip":true,
+        "tooltip-format":"status: {status}"
+    }
+}

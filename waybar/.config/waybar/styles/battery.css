@@ -1,0 +1,9 @@
+#battery.critical,
+box.horizontal widget #battery.critical{
+    color: red;
+}
+
+#battery.warning,
+box.horizontal widget #battery.warning{
+    color: yellow;
+}

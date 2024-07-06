@@ -1,0 +1,15 @@
+#workspaces button{
+    border-radius: 25px;
+    background: transparent;
+    border: 0px transparent;
+    /* margin: 4px; */
+}
+
+#workspaces button:first-child{
+    margin-left: 8px;
+    
+}
+
+#workspaces button:last-child{
+    margin-right:8px;
+}

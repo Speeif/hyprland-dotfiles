@@ -1,0 +1,12 @@
+{
+    "custom/microphone":{
+        "return-type":"json",
+        // "exec":"echo '{\"text\":\"aaa\"}'",
+        "exec":"~/.config/waybar/modules/scripts/microphone.sh --get",
+        // "interval": "1",
+        "tooltip":true,
+        "on-scroll-up": "~/.config/waybar/modules/scripts/microphone.sh --toggle-on",
+        "on-scroll-down": "~/.config/waybar/modules/scripts/microphone.sh --toggle-off",
+        "on-click-right":"~/.config/waybar/modules/scripts/microphone.sh --toggle-alt"
+    }
+}

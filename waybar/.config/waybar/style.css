@@ -1,0 +1,83 @@
+/* 
+==================={{[[ NOTES ]]}}===================
+Notes, classes and id's.
+.
+└── waindow#waybar/
+    ├── decoration
+    └── box.horizontal/
+        ├── box.horizontal.modules-left/
+        │   └── widget/
+        │       └── label#<modules-name>
+        ├── box.horizontal.modules-middle/
+        │   └── widget/
+        │       └── label#<modules-name>
+        └── box.horizontal.modules-right/
+            └── box#<group-name>/
+                └── widget/
+                    └── label#<module-name>
+
+This information can be got by running waybar with the following command
+`waybar --config ~/.dotfiles/waybar/config.jsonc -l trace`
+*/
+@import url("../../.cache/wal/gtk.css");
+
+* {
+    /* background: rgba(255, 0, 0, 0.1); */
+    font-family: "Fira Code","Material Icons";
+    font-size: 12px;
+    font-weight: 400;
+    margin:0;
+    padding: 0;
+    border: 0;
+    color: @foreground;
+}
+
+window#waybar{
+    background: transparent;
+}
+
+window#waybar > box {
+    padding: 6px 10px 0 10px;
+}
+box.modules-left > widget > box,
+box.modules-right > widget > box:not(#status),
+box.modules-center > widget > box {
+    background: @background;
+    border-radius: 200px;
+    border: 1px @accent solid;
+}
+
+box.modules-left > widget:not(:last-child) > box,
+box.modules-right > widget:not(:last-child) > box,
+box.modules-center > widget:not(:last-child) > box{
+    margin-right: 4px;
+}
+
+box > widget > box > widget:last-child > label{
+    padding-right: 16px;
+}
+
+box > widget > box > widget:first-child > label{
+    padding-left: 12px;
+}
+
+widget > label{
+    padding: 4px;
+}
+
+#custom-verticalseperator{
+    margin: 2px 0 0 2px;
+}
+
+box.modules-right > widget > box#status {
+    background: transparent;
+    min-width: 250px;
+    padding: 0px 12px;
+}
+
+@import url("./styles/updates.css");
+@import url("./styles/bluetooth.css");
+@import url("./styles/network.css");
+@import url("./styles/pulseaudio.css");
+@import url("./styles/battery.css");
+@import url("./styles/workspaces.css");

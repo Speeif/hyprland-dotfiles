@@ -1,0 +1,26 @@
+/* label#custom-updates{
+    border: 1px @accent solid;
+    border-radius: 25px;
+    padding: 2px 12px;
+    margin-right: 4px;
+}
+
+label#custom-updates.invisible{
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+label#custom-updates.green{
+    background: @green;
+}
+
+label#custom-updates.yellow{
+    background: @yellow;
+}
+
+label#custom-updates.red{
+    background: @red;
+}
+ */

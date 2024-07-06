@@ -1,0 +1,10 @@
+* {{
+    accent-color: {color5}
+    foreground: {foreground};
+    background: {background};
+    text: {color7};
+
+    red: {color9};
+    yellow: {color4};
+    green: {color3};
+}}

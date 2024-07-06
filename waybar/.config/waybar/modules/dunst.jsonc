@@ -1,0 +1,8 @@
+{
+    "custom/dunst":{
+        "return-type":"json",
+        "exec":"~/.dotfiles/waybar/modules/scripts/dunst.sh",
+        "restart-interval":300,
+        "on-click":"dunst set-pause toggle"
+    }
+}

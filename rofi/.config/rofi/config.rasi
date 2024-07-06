@@ -1,0 +1,70 @@
+/* config - Launcher */
+
+configuration {
+	modi:                         "drun";
+    show-icons:                 true;
+    display-calc:               " ";
+    display-drun:               " ";
+  	drun-display-format:        "{name}";
+    font:                        "JetBrains Mono Nerd Font 12";
+}
+
+@import ".cache/wal/colors-rofi-dark.rasi"
+// Custom coloringa
+@import ".cache/wal/rofi-template.rasi"
+
+window{
+    orientation: horizontal;
+    children: [ mainbox ];
+
+    border-color: @accent;
+    border: 1;
+    border-radius: 8px;
+    padding: 8;
+}
+
+mainbox{
+    margin:4;
+    border: 0;
+    children: [ inputbar, message, listview ];
+    background-color: transparent;
+    spacing: 12px;
+}
+
+inputbar{
+    children: [ prompt, textbox-prompt-colon, entry ];
+    background-color: transparent;
+}
+
+//message{
+//    
+//}
+
+listview{
+    /* children
+    The children of this widget is ENFORCED.
+    The only way to remove the scrollbar is
+    with the `scrollbar: (true/fale);` property */
+    //children: [ element, scrollbar ];
+
+    scrollbar:true;
+    background-color: transparent;
+}
+
+entry{
+    placeholder:"hehe...";
+}
+
+element{
+    orientation: horizontal;
+    children: [ element-icon, element-text ];
+    spacing: 5px;
+}
+
+element-text{
+
+}
+
+element-icon{
+    size: 1.5em;
+}

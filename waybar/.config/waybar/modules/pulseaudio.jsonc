@@ -1,0 +1,37 @@
+{
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "on-click-right": "~/.config/HyprV/waybar/scripts/volume --toggle",
+        "on-click": "pavucontrol",
+        "on-scroll-up": "~/.config/HyprV/waybar/scripts/volume --inc",
+        "on-scroll-down": "~/.config/HyprV/waybar/scripts/volume --dec",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "tooltip": true,
+        "tooltip-format": "Volume at {volume}%",
+        "format-source":"{volume}% {icon}"
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-alt":"{format_source}",
+        "format-alt-click":"click-right",
+        "format-source": "",
+        "format-source-muted": "",
+        "on-click-right": "~/.config/HyprV/waybar/scripts/volume --toggle-mic",
+        "on-click": "pavucontrol",
+        "on-scroll-up": "~/.config/HyprV/waybar/scripts/volume --mic-inc",
+        "on-scroll-down": "~/.config/HyprV/waybar/scripts/volume --mic-dec",
+        "scroll-step": 5,
+        "tooltip": true,
+        "tooltip-format": "Microphone at {volume}%"
+    }
+}
