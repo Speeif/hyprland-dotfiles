@@ -1,14 +1,26 @@
 #!/usr/env/bash
-
+OPTION="$1"
 files=($(ls -d */))
+
+function prompt {
+    text="$1"
+    answer=""
+
+    if [[ "$OPTION" == "--full" ]]; then
+        echo "Y"
+        return
+    fi
+
+    read -p "$text [y/N]" answer
+    echo "$answer"
+}
 
 function install {
     package=$(basename $1)
 
-    read -p "Install $package dotfiles? [y/N]" answer
+    answer="$(prompt "Install $package dotfiles?")"
 
     if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
-
         # TODO: SDDM
         if [[ "$package" == "SDDM" ]]; then
             str1="As this package creates a symlink in the"
@@ -32,7 +44,7 @@ function install {
 
 for file in "${files[@]}"; do
     # Check for basename
-    echo $file
+    echo -e "\e[95m[ $file ]\e[0m"
 
     install $file
 done
