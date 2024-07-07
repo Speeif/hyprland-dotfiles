@@ -1,0 +1,61 @@
+# Basic settings
+set hidden true
+set ignorecase true
+set icons true
+set preview true
+set ifs "\n"
+
+# Custom functions
+cmd mkdir ${{
+    printf "Directory Name: "
+    read ans
+    mkdir $ans
+}}
+
+cmd mkfile ${{
+    printf "File Name: "
+    read ans
+    touch $ans
+}}
+
+cmd vscode ${{
+    code $1
+}}
+
+cmd frm ${{
+    echo 'Are you sure you want to delete? [y/N]'
+    read ans
+    [[ $ans == 'y' || $ans == 'Y' ]]&& printf 'deleting files\n' || exit 0
+    # Maybe only a single file selected
+    files=$fs
+    if [[ ${#files[@]} -le 1 && ${#files[0]} -le 0  ]]; then
+        files[0]="$f"
+    fi
+    
+    for file in $files;do
+        echo "Removing file $file"
+        rm -fr "$file"
+    done
+    sleep 2
+}}
+
+# Mapping
+map . set hidden!
+map <c-c> copy
+map <c-v> paste
+map <c-x> cut
+map <c-d> frm
+map <f-2> rename
+map <enter> open
+map R reload
+map e %code "$f"
+
+# File creation
+map mf push :mkfile<space>
+map md push :mkdir<space>
+
+# Movement
+map gp cd ~/Documents/projects/
+
+# Unmaps
+map m

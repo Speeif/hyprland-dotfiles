@@ -9,6 +9,7 @@ This repository was created to host my hyprland dotfiles, which includes a selec
 1. starship (shell prompt)
 1. rofi     (application launcher)
 1. mako     (notification daemon)
+1. lf       (file manager)
 1. pywal    (configurable color picker)
 1. pacseek  (AUR and Arch database searcher)
 
